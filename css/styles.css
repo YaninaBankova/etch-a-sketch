@@ -6,23 +6,30 @@
 
 body {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .container {
+    aspect-ratio: 1 / 1;
     display: flex;
     flex-wrap: wrap;
     gap: 1px;
-    width: 100vh;
+    max-height: 90vh;
+    max-width: 100vw;
     background-color: #ccc;
     padding: 5px;
 }
 
 .grid-square {
-    width: calc((100vh - 15px - 10px) / 16);
+    aspect-ratio: 1 / 1;
+    width: calc((90vh - 15px - 10px) / 16);
     /* 15px for gap between squares and 2 * 5px for padding */
-    height: calc((100vh - 25px) / 16);
     max-width: calc((100vw - 25px) / 16);
-    max-height: calc((100vw - 25px) / 16);
     background-color: white;
+}
+
+button {
+    margin: 10px;
+    padding: 5px;
 }
