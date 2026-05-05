@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+    width: 100vh;
+}
+
+.grid-square {
+    width: calc(100vh / 16 - 1px);
+    height: calc(100vh / 16 - 1px);
+    max-width: calc(100vw / 16 - 1px);
+    max-height: calc(100vw / 16 - 1px);
+    background-color: rgb(0, 181, 181);
+}
