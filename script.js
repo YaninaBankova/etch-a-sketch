@@ -5,8 +5,14 @@ function createGrid(rows, cols){
             let gridSquare = document.createElement("div");
             gridSquare.classList.add("grid-square");
             container.appendChild(gridSquare);
+            gridSquare.addEventListener("mouseenter", hoverEffect);
         }
     }
 }
 
 createGrid(16, 16);
+
+function hoverEffect(event){
+    const gridSquare = event.target;
+    gridSquare.style.backgroundColor = "black";
+}

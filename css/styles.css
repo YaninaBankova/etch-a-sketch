@@ -14,12 +14,15 @@ body {
     flex-wrap: wrap;
     gap: 1px;
     width: 100vh;
+    background-color: #ccc;
+    padding: 5px;
 }
 
 .grid-square {
-    width: calc(100vh / 16 - 1px);
-    height: calc(100vh / 16 - 1px);
-    max-width: calc(100vw / 16 - 1px);
-    max-height: calc(100vw / 16 - 1px);
-    background-color: rgb(0, 181, 181);
+    width: calc((100vh - 15px - 10px) / 16);
+    /* 15px for gap between squares and 2 * 5px for padding */
+    height: calc((100vh - 25px) / 16);
+    max-width: calc((100vw - 25px) / 16);
+    max-height: calc((100vw - 25px) / 16);
+    background-color: white;
 }
