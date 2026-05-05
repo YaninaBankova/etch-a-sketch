@@ -27,7 +27,10 @@ function deleteGrid(){
 
 function hoverEffect(event){
     const gridSquare = event.target;
-    gridSquare.style.backgroundColor = "black";
+    let opacity = +getComputedStyle(gridSquare).opacity;
+    if(opacity < 1){
+        gridSquare.style.opacity = opacity + 0.1;
+    }
 }
 
 const resize = document.querySelector("#resize");
