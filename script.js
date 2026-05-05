@@ -25,9 +25,19 @@ function deleteGrid(){
      }
 }
 
+function getRandomRGBColor(){
+    let red = Math.floor(Math.random() * 256);
+    let green = Math.floor(Math.random() * 256);
+    let blue = Math.floor(Math.random() * 256);
+    return `rgb(${red}, ${green}, ${blue})`;
+}
+
 function hoverEffect(event){
     const gridSquare = event.target;
     let opacity = +getComputedStyle(gridSquare).opacity;
+    if(opacity === 0){
+        gridSquare.style.backgroundColor = getRandomRGBColor();
+    }
     if(opacity < 1){
         gridSquare.style.opacity = opacity + 0.1;
     }
